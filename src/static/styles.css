@@ -101,13 +101,30 @@ section h3 {
   border-radius: 3px;
   font-size: 14px;
   color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.activity-card .participants-list li:before {
-  content: "• ";
-  color: #1a237e;
-  font-weight: bold;
-  margin-right: 8px;
+.activity-card .participants-list .participant-email {
+  flex-grow: 1;
+}
+
+.activity-card .participants-list .delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px 8px;
+  transition: transform 0.2s;
+  opacity: 0.6;
+}
+
+.activity-card .participants-list .delete-btn:hover {
+  transform: scale(1.2);
+  opacity: 1;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 3px;
 }
 
 .activity-card .no-participants {
